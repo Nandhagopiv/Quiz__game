@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Comfortaa:wght@300..700&family=Pacifico&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Quiz-React</title>
+</head>
+
+<body class="QA__body">
+    <main class="QA">
+        <div class="QA__div">
+            <form action="result.html">
+                <div style="display: flex; flex-direction: column; gap: 25px;">
+                    <div>
+                        <h3>1. What is the capital of France?</h3>
+                        <div>
+                            <input type="radio" name="question1" id="a" value="a"> <label for="a">Paris</label><br>
+                            <input type="radio" name="question1" id="b" value="b"> <label for="b">London</label><br>
+                            <input type="radio" name="question1" id="c" value="c"> <label for="c">Madrid</label><br>
+                            <input type="radio" name="question1" id="d" value="d"> <label for="d">Berlin</label><br>
+                        </div>
+                        <button name="next">Next</button>
+                    </div>
+
+                    <div style="display: none;">
+                        <h3>2. Who wrote "Romeo and Juliet"?</h3>
+                        <div>
+                            <input type="radio" name="question2" id="a2" value="a"> <label for="a2">William
+                                Shakespeare</label><br>
+                            <input type="radio" name="question2" id="b2" value="b"> <label for="b2">Jane
+                                Austen</label><br>
+                            <input type="radio" name="question2" id="c2" value="c"> <label for="c2">Charles
+                                Dickens</label><br>
+                            <input type="radio" name="question2" id="d2" value="d"> <label for="d2">Leo
+                                Tolstoy</label><br>
+                        </div>
+                        <button name="next">Next</button>
+                        <button name="prev">Previous</button>
+                    </div>
+
+                    <div style="display: none;">
+                        <h3>3. What is the chemical symbol for water?</h3>
+                        <div>
+                            <input type="radio" name="question3" id="a3" value="a"> <label for="a3">H2O</label><br>
+                            <input type="radio" name="question3" id="b3" value="b"> <label for="b3">CO2</label><br>
+                            <input type="radio" name="question3" id="c3" value="c"> <label for="c3">O2</label><br>
+                            <input type="radio" name="question3" id="d3" value="d"> <label for="d3">H2SO4</label><br>
+                        </div>
+                        <button name="next">Next</button>
+                        <button name="prev">Previous</button>
+                        
+                    </div>
+
+                    <div style="display: none;">
+                        <h3>4. Who painted the Mona Lisa?</h3>
+                        <input type="radio" name="question4" id="a4" value="a"> <label for="a4">Leonardo da
+                            Vinci</label><br>
+                        <input type="radio" name="question4" id="b4" value="b"> <label for="b4">Pablo Picasso</label><br>
+                        <input type="radio" name="question4" id="c4" value="c"> <label for="c4">Vincent van
+                            Gogh</label><br>
+                        <input type="radio" name="question4" id="d4" value="d"> <label for="d4">Michelangelo</label><br>
+                        <button name="next">Next</button>
+                        <button name="prev">Previous</button>
+                    </div>
+
+                    <div style="display: none;">
+                        <h3>5. Which planet is known as the Red Planet?</h3>
+                        <input type="radio" name="question5" id="a5" value="a"> <label for="a5">Mars</label><br>
+                        <input type="radio" name="question5" id="b5" value="b"> <label for="b5">Venus</label><br>
+                        <input type="radio" name="question5" id="c5" value="c"> <label for="c5">Mercury</label><br>
+                        <input type="radio" name="question5" id="d5" value="d"> <label for="d5">Jupiter</label><br>
+                        <button name="next">Next</button>
+                        <button name="prev">Previous</button>
+                    </div>
+
+                    <div style="display: none;">
+                        <h3>6. Who wrote "To Kill a Mockingbird"?</h3>
+                        <input type="radio" name="question6" id="a6" value="a"> <label for="a6">Harper Lee</label><br>
+                        <input type="radio" name="question6" id="b6" value="b"> <label for="b6">Mark Twain</label><br>
+                        <input type="radio" name="question6" id="c6" value="c"> <label for="c6">J.K. Rowling</label><br>
+                        <input type="radio" name="question6" id="d6" value="d"> <label for="d6">George Orwell</label><br>
+                        <button name="next">Next</button>
+                        <button name="prev">Previous</button>
+                    </div>
+
+                    <div style="display: none;">
+                        <h3>7. What is the largest mammal in the world?</h3>
+                        <input type="radio" name="question7" id="a7" value="a"> <label for="a7">Blue Whale</label><br>
+                        <input type="radio" name="question7" id="b7" value="b"> <label for="b7">Elephant</label><br>
+                        <input type="radio" name="question7" id="c7" value="c"> <label for="c7">Giraffe</label><br>
+                        <input type="radio" name="question7" id="d7" value="d"> <label for="d7">Hippopotamus</label><br>
+                        <button name="next">Next</button>
+                        <button name="prev">Previous</button>
+                    </div>
+
+                    <div style="display: none;">
+                        <h3>8. Who invented the light bulb?</h3>
+                        <input type="radio" name="question8" id="a8" value="a"> <label for="a8">Thomas Edison</label><br>
+                        <input type="radio" name="question8" id="b8" value="b"> <label for="b8">Nikola Tesla</label><br>
+                        <input type="radio" name="question8" id="c8" value="c"> <label for="c8">Alexander Graham
+                            Bell</label><br>
+                        <input type="radio" name="question8" id="d8" value="d"> <label for="d8">Albert
+                            Einstein</label><br>
+                        <button name="next">Next</button>
+                        <button name="prev">Previous</button>
+                    </div>
+
+                    <div style="display: none;">
+                        <h3>9. What is the chemical symbol for gold?</h3>
+                        <input type="radio" name="question9" id="a9" value="a"> <label for="a9">Au</label><br>
+                        <input type="radio" name="question9" id="b9" value="b"> <label for="b9">Ag</label><br>
+                        <input type="radio" name="question9" id="c9" value="c"> <label for="c9">Fe</label><br>
+                        <input type="radio" name="question9" id="d9" value="d"> <label for="d9">Cu</label><br>
+                        <button name="next">Next</button>
+                        <button name="prev">Previous</button>
+                    </div>
+
+                    <div style="display: none;">
+                        <h3>10. Who is the current president of the United States?</h3>
+                        <input type="radio" name="question10" id="a10" value="a"> <label for="a10">Joe Biden</label><br>
+                        <input type="radio" name="question10" id="b10" value="b"> <label for="b10">Donald Trump</label><br>
+                        <input type="radio" name="question10" id="c10" value="c"> <label for="c10">Barack Obama</label><br>
+                        <input type="radio" name="question10" id="d10" value="d"> <label for="d10">George W.
+                            Bush</label><br>
+                        <button name="prev">Previous</button>
+                        <button id="submit" type="submit">Submit</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </main>
+    <script src="QandA.js"></script>
+</body>
+
+</html>
