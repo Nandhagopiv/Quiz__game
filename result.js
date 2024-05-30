@@ -3,8 +3,19 @@ var remail = document.getElementById("result__email")
 var rscore = document.getElementById("result__score")
 var data__name = localStorage.getItem("exportedname")
 var data__email = localStorage.getItem("exportedemail")
+var vresult = document.getElementById("viewresult")
+var rtable = document.getElementById("rt")
+var rh = document.getElementById("rh")
 var uScore = localStorage.getItem("userScore")
+var restartbtn = document.getElementById("restart__btn")
+var vresultbtn = document.getElementById("viewresult__btn")
 var remarks;
+
+vresultbtn.addEventListener("click", function () {
+    vresult.style.display = "none"
+    rtable.style.display = "block"
+    rh.style.display = "block"
+})
 
 if (uScore < 2) {
     remarks = "Very Poor"
@@ -16,7 +27,7 @@ if (uScore < 2) {
     remarks = "Good"
 } else if (uScore < 10) {
     remarks = "Very Good"
-} else if (uScore === 10) {
+} else if (uScore == 10) {
     remarks = "Excellent"
 }
 
@@ -24,10 +35,9 @@ rname.innerHTML = `<h1>${data__name}</h1>`
 remail.innerHTML = `<h1>${data__email}</h1>`
 rscore.innerHTML = `<h1>${uScore} / 10 (${remarks})</h1>`
 
-uScore = null
-data__email= null
-data__name= null
+restartbtn.addEventListener("click", function () {
+    localStorage.removeItem("exportedname")
+    localStorage.removeItem("exportedemail")
+    localStorage.removeItem("userScore")
+})
 
-localStorage.removeItem("exportedname")
-localStorage.removeItem("exportedemail")
-localStorage.removeItem("userScore")

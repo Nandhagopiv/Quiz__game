@@ -2,48 +2,58 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Pacifico&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Anton&family=Comfortaa:wght@300..700&family=Pacifico&display=swap"
-    rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Comfortaa:wght@300..700&family=Pacifico&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-  <title>Quiz-React</title>
+    <title>Quiz-React</title>
 </head>
 
 <body class="result__body">
-    <div class="result__head">
+    <div id="rh" class="result__head">
         <h1>RESULT</h1>
     </div>
     <section class="result__sec">
-        <table class="result__table">
-            <tr>
-                <td>
-                    <h1>Name:</h1>
-                </td>
-                <td style="color: #D4CF5C" id="result__name">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <h1>Email:</h1>
-                </td>
-                <td style="color:#D4CF5C" id="result__email">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <h1>Score:</h1>
-                </td>
-                <td style="color: #D4CF5C" id="result__score">
-                </td>
-            </tr>
-        </table>
+        <div id="viewresult">
+            <h1>Thank you for Submitting...</h1>
+            <button id="viewresult__btn" class="viewresult__b">View Result</button>
+        </div>
+        <form action="index.html">
+            <table id="rt" class="result__table">
+                <tr>
+                    <td>
+                        <h1>Name:</h1>
+                    </td>
+                    <td style="color: white" id="result__name">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h1>Email:</h1>
+                    </td>
+                    <td style="color:white" id="result__email">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h1>Score:</h1>
+                    </td>
+                    <td style="color: white" id="result__score">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button type="submit" class="restart__b" id="restart__btn">Restart</button></td>
+                </tr>
+            </table>
+        </form>
     </section>
     <script src="result.js"></script>
 </body>

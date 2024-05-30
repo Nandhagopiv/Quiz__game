@@ -7,5 +7,3 @@ form.addEventListener("submit", function(){
     localStorage.setItem("exportedemail", uemail.value)
     window.location.href = "result.html"
 })
-
-console.log(uname.value);

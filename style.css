@@ -151,18 +151,19 @@ body {
 }
 
 .result__body{
-    background-color:#1E2609;
-    color: #52902D;
+    background-color:#AC8969;
+    color: #3F362F;
     font-family: "Comfortaa", sans-serif;
     font-optical-sizing: auto;
     font-size: 32px;
 }
 
 .result__head{
-    color: #286522;
+    color: #3F362F;
     font-size: 48px;
     margin-top: 100px;
     text-align: center;
+    display: none;
 }
 
 .result__table tr td{
@@ -171,6 +172,33 @@ body {
 
 .result__table{
     margin-top: 50px;
+    display: none;
+}
+
+#viewresult{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.viewresult__b{
+    padding: 10px;
+    background-color: white;
+    color: #3F362F;
+    font-weight: bolder;
+    font-size: 16px;
+    border: none;
+}
+
+.restart__b{
+    padding: 10px;
+    background-color: white;
+    font-size: 16px;
+    color: #3F362F;
+    font-weight: bolder;
+    border: none;
 }
 
 .result__sec{
@@ -184,8 +212,17 @@ body {
         margin-top: 200px;
     }
 
+    .result__table tr td{
+        padding: 10px;
+    }
+
     .result__body{
         font-size: 16px;
+    }
+
+    #result__name h1, #result__email h1, #result__score h1{
+        width: 200px;
+        word-wrap: break-word;
     }
 
     .instruction h1{
