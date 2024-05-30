@@ -13,10 +13,11 @@ var q9 = document.getElementsByName("question9")
 var q10 = document.getElementsByName("question10")
 
 var userscore = 0
+var timeup = 0
 
-let milliseconds = 2.5 * 60 * 1000;
+let milliseconds = 0.5 * 60 * 1000
 
-document.getElementById('timer').textContent = formatTime(milliseconds);
+document.getElementById('timer').textContent = formatTime(milliseconds)
 
 const timerInterval = setInterval(function() {
     milliseconds = milliseconds - 1000
@@ -24,10 +25,11 @@ const timerInterval = setInterval(function() {
 
     if (milliseconds <= 0) {
         clearInterval(timerInterval)
-        console.log("Time's up!")
+        alert("Time's up!")
+        timeup = 1
         submit.click()
     }
-}, 1000);
+}, 1000)
 
 function formatTime(milliseconds) {
     const minutes = Math.floor(milliseconds / (1000 * 60))
@@ -35,11 +37,10 @@ function formatTime(milliseconds) {
     return `Time Remaining: ${minutes}m ${seconds}s`
 }
 
-console.log(60000*5 % (1000 * 60)/1000)
-
 
 submit.addEventListener("click", function (event) {
     event.preventDefault()
+    clearInterval(timerInterval)
     for (let i = 0; i < q1.length; i++) {
         if (q1[i].checked) {
             if (q1[i].value == "a") {
@@ -97,6 +98,7 @@ submit.addEventListener("click", function (event) {
     }
 
     localStorage.setItem("userScore", userscore)
+    localStorage.setItem("timeUp", timeup)
     window.location.href = "result.html"
 })
 

@@ -7,9 +7,17 @@ var vresult = document.getElementById("viewresult")
 var rtable = document.getElementById("rt")
 var rh = document.getElementById("rh")
 var uScore = localStorage.getItem("userScore")
+var timeup = localStorage.getItem("timeUp")
+var timeupmsg = document.getElementById("timeupmsg")
 var restartbtn = document.getElementById("restart__btn")
 var vresultbtn = document.getElementById("viewresult__btn")
 var remarks;
+
+if (timeup == 0) {
+    timeupmsg.textContent = "Thank you for Submitting..."
+} else if (timeup == 1) {
+    timeupmsg.textContent = "Time's Up!... Check your score below"
+}
 
 vresultbtn.addEventListener("click", function () {
     vresult.style.display = "none"
