@@ -25,6 +25,11 @@ const timerInterval = setInterval(function() {
 
     if (milliseconds <= 0) {
         clearInterval(timerInterval)
+        for (let i = 0; i < next.length; i++) {
+            next[i].style.display = "none"
+            prev[i].style.display = "none"
+            submit.style.display = "none"
+        }
         alert("Time's up!")
         timeup = 1
         submit.click()
@@ -100,6 +105,12 @@ submit.addEventListener("click", function (event) {
     localStorage.setItem("userScore", userscore)
     localStorage.setItem("timeUp", timeup)
     window.location.href = "result.html"
+
+    for (let i = 0; i < next.length; i++) {
+        next[i].style.display = "none"
+        prev[i].style.display = "none"
+        submit.style.display = "none"
+    }
 })
 
 for (let i = 0; i < next.length; i++) {
