@@ -23,7 +23,7 @@
             let  days = millisec / (60000 * 60 * 24)
             let sec = millisec % 60000
             let hour = (millisec/3600000) - (24 * Math.floor(days))
-            let min = (millisec / 60000) - (60 * Math.floor(hour))
+            let min = (millisec % 360000) / 60000
             return `<h1>${Math.floor(days)}d ${Math.floor(hour)}h ${Math.floor(min)}m ${sec/1000}s</h1>`
         }
 
