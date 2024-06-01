@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="timer">
+
+    </div>
+    <script>
+        let millisec = 60000 * 60 * 48
+
+        document.getElementById("timer").textContent = stopwatch()
+
+        let timeInterval = setInterval(function(){
+            millisec = millisec - 1000
+            document.getElementById("timer").textContent = stopwatch(millisec)
+        },1000)
+
+        function stopwatch(millisec){
+            let  days = millisec / (60000 * 60 * 24)
+            let sec = millisec % 60000
+            let hour = (millisec/3600000) - (24 * Math.floor(days))
+            let min = (millisec / 60000) - (60 * Math.floor(hour))
+            return `<h1>${Math.floor(days)}d ${Math.floor(hour)}h ${Math.floor(min)}m ${sec/1000}s</h1>`
+        }
+
+    </script>
+</body>
+</html>
